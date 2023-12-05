@@ -1,4 +1,5 @@
 transl = {} # "<initial pattern>": "<changed>"
+biggest_pattern_len = 4 # depends on the contents of 'transl' dictionary
 
 def process(text: str):
     res = ""
@@ -9,7 +10,7 @@ def process(text: str):
     i = 0
     while i < len(text):
         cmb += text[i]
-        for j in range(4):
+        for j in range(biggest_pattern_len):
             try:
                 last_correct = transl[cmb]
                 last_correct_unproc_len = len(cmb)
