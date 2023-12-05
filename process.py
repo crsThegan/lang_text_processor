@@ -1,3 +1,5 @@
+transl = {} # "<initial pattern>": "<changed>"
+
 def process(text: str):
     res = ""
     cmb = ""
